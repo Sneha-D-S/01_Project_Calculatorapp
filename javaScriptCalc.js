@@ -47,10 +47,8 @@ function myEvt(e) {
     //Calling the function that will run operations on the numbers that were entered by the user.
     arrNum = numOpp(arrNum);
 
-    console.log(arrNum + " okay");
     clearArray(arrNum);
     arrNum.push(e);
-    console.log(arrNum + " okay");
   } else if (c1 == "clearAll") {
     nextDisplay();
     clearArray(arrNum);
