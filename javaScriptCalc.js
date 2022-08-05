@@ -90,7 +90,12 @@ function plusThis() {
   for (var i = 0; i < arrNum.length; i++) {
     if (arrNum[i - 1] == "plus") {
       console.log(false);
-      n3 = arrNum[i - 2] + arrNum[i];
+      if (arrNum[i - 2] < 1 && arrNum[i] < 1) {
+        n3 = (arrNum[i - 2] * 10 + arrNum[i] * 10) / 10;
+      } else {
+        n3 = arrNum[i - 2] + arrNum[i];
+      }
+
       arrNum.splice(0, i + 1, n3);
       console.log(arrNum);
       console.log("a");
