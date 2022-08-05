@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheetCalc.css" />
+    <script src="javaScriptCalc.js"></script>
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <div class="mainBody">
+      <div class="heading">
+        <h2>Calculator App</h2>
+        <p id="currentDate">
+          <!--Adding the current Date to the page-->
+          <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            if (month < 10) {
+              month = "0" + month;
+            }
+            day = date.getDate();
+            if (day < 10) {
+              day = "0" + day;
+            }
+            document.getElementById("currentDate").innerHTML =
+              day + "/" + month + "/" + year;
+          </script>
+        </p>
+      </div>
+      <!--Adding calculator to the page-->
+      <div class="calcBody">
+        <div class="formContainer">
+          <div class="textContainer">
+            <!--Adding the input field to the calculator-->
+            <form>
+              <input
+                class="calcText"
+                id="calcText"
+                type="text"
+                placeholder="0"
+              />
+            </form>
+          </div>
+        </div>
+        <!--Adding the group of buttons to the calculator-->
+        <div class="buttonContainer">
+          <div class="buttonRow">
+            <button
+              class="calcBtn clearAll"
+              id="clear"
+              onclick="myEvt(this.id)"
+            >
+              AC
+            </button>
+            <button class="calcBtn delete" id="del" onclick="myEvt(this.id)">
+              Del
+            </button>
+            <button
+              class="calcBtn operator"
+              onclick="myEvt(this.id)"
+              id="plus"
+              onclick="myEvt(this.id)"
+            >
+              &plus;
+            </button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="seven">
+              7
+            </button>
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="eight">
+              8
+            </button>
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="nine">
+              9
+            </button>
+            <button
+              class="calcBtn operator"
+              onclick="myEvt(this.id)"
+              id="subtract"
+            >
+              &minus;
+            </button>
+          </div>
+          <div class="buttonRow">
+            <button
+              class="calcBtn calcNum"
+              onclick="myEvt(this.id)"
+              id="four"
+              onclick="myEvt(this.id)"
+            >
+              4
+            </button>
+            <button
+              class="calcBtn calcNum"
+              onclick="myEvt(this.id)"
+              id="five"
+              onclick="myEvt(this.id)"
+            >
+              5
+            </button>
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="six">
+              6
+            </button>
+            <button
+              class="calcBtn operator"
+              onclick="myEvt(this.id)"
+              id="divide"
+            >
+              &divide;
+            </button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="one">
+              1
+            </button>
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="two">
+              2
+            </button>
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="three">
+              3
+            </button>
+            <button
+              class="calcBtn operator"
+              onclick="myEvt(this.id)"
+              id="multiply"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcBtn calcNum" onclick="myEvt(this.id)" id="zero">
+              0
+            </button>
+            <button
+              class="calcBtn decimalPt"
+              onclick="myEvt(this.id)"
+              id="decimalPt"
+            >
+              .
+            </button>
+            <button
+              class="calcBtn equalsTo"
+              onclick="myEvt(this.id)"
+              id="equals"
+            >
+              &equals;
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Copyright HTML, CSS and JS written by Sneha D Seshadri-->
+      <div
+        style="
+          position: absolute;
+          bottom: 1%;
+          left: 1%;
+          font-size: 14px;
+          color: rgb(222, 222, 222);
+        "
+      >
+        &#169; The HTML, CSS and JavaScript of this app are written by Sneha D S
+      </div>
+    </div>
+  </body>
+</html>
