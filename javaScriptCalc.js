@@ -138,7 +138,7 @@ function multiplyThis() {
   return n3;
   console.log(arrNum);
 } //end of multiplyThis()
-//dividing the first number that was entered by the last number entered by.
+//dividing the first number that was entered by the last number entered.
 function divideThis() {
   var sumNum = 0;
   for (var i = 0; i < arrNum.length; i++) {
