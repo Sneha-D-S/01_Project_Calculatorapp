@@ -3,7 +3,7 @@ var num = "";
 var n3 = 0;
 var arrNum = [];
 
-//Event handeler
+//Event handeler function myEvt() receives the id of the element the user clicks as the arguement for the parameter e.
 function myEvt(e) {
   var n1 = document.getElementById(e).innerHTML;
   var c1 = document.getElementById(e).classList[1];
@@ -53,8 +53,9 @@ function myEvt(e) {
     nextDisplay();
     clearArray(arrNum);
     n3 = 0;
+    document.getElementById("calcText").value = "";
   }
-}
+} //end of myEvt() function
 
 //Function to display the result of the operations
 function numOpp(arr) {
@@ -69,7 +70,7 @@ function numOpp(arr) {
   }
   num = "";
   return arr;
-}
+} //end of numOpp() function
 //Function to clear the array
 function clearArray(arr) {
   for (var i = 0; i < arrNum.length; i++) {
@@ -98,7 +99,7 @@ function plusThis() {
       console.log(arrNum);
       console.log("a");
     }
-  }
+  } //end of plusThis()
   num = "";
 
   return n3;
@@ -119,7 +120,7 @@ function subtractThis() {
   num = "";
   return n3;
   console.log(arrNum);
-}
+} //end of subtractThis()
 //Multiplying the last number entered and the number that was entered before it.
 function multiplyThis() {
   var sumNum = 0;
@@ -136,7 +137,7 @@ function multiplyThis() {
   num = "";
   return n3;
   console.log(arrNum);
-}
+} //end of multiplyThis()
 //dividing the first number that was entered by the last number entered by.
 function divideThis() {
   var sumNum = 0;
@@ -153,5 +154,5 @@ function divideThis() {
   num = "";
   return n3;
   console.log(arrNum);
-}
+} //end of multiplyThis()
 //JavaScript written by Sneha D Seshadri
